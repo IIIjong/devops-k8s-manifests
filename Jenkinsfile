@@ -25,6 +25,7 @@ pipeline {
                 sh 'git config user.name "iiijong"'
                 sh 'git config user.email "pjwfish@naver.com"'
                 sh 'git config --list'
+                sh 'git add .'
                 sh "git commit -m 'Update Image Version ${params.DOCKER_IMAGE_VERSION}'"
                 sh 'git status'
                 sh 'git push'
