@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Hello World') {
             steps {
-                sh "${params.DOCKER_IMAGE_VERSION}"
+                echo "${params.DOCKER_IMAGE_VERSION}"
             }
         }
     }
