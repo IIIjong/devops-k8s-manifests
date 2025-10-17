@@ -8,7 +8,9 @@ pipeline {
     stages {
         stage('Hello World') {
             steps {
-                echo "${params.DOCKER_IMAGE_VERSION}"
+                dir('department-api'){
+                    echo "${params.DOCKER_IMAGE_VERSION}"
+                }
             }
         }
     }
