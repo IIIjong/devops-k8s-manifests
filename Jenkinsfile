@@ -1,9 +1,14 @@
 pipeline {
     agent any
+
+    parameters {
+        string(name: 'DOCKER_IMAGE_VERSION', defaultValue: '', description: 'Docker Image Version')
+    }
+
     stages {
         stage('Hello World') {
             steps {
-                sh 'echo "Hello World"'
+                sh "${params.DOCKER_IMAGE_VERSION}"
             }
         }
     }
