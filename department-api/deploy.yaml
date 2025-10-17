@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: department-api
-        image: iiijong/department-service:36
+        image: iiijong/department-service:38
         resources:
           requests:
             memory: "128Mi"
