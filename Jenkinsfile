@@ -28,7 +28,7 @@ pipeline {
                 
                     echo "Received Docker Image Version ${params.DOCKER_IMAGE_VERSION}"
                     sh 'git checkout main'
-                    sh "sed -i 's|iiijong/university-service:.*|iiijong/university-service:${params.DOCKER_IMAGE_VERSION}|g' deploy.yaml"
+                    sh "sed -i 's|iiijong/university-vue:.*|iiijong/university-vue:${params.DOCKER_IMAGE_VERSION}|g' deploy.yaml"
                     sh 'cat deploy.yaml'
                 }
             }
@@ -56,7 +56,7 @@ pipeline {
                     return params.DID_BUILD_API == "true" ||  params.DID_BUILD_APP == "true"
                 }
             }
-            
+
             steps {
                 
                 sh 'git config --list'
