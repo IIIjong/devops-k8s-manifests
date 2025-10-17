@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: department-api-service
+spec:
+  type: ClusterIP
+  selector:
+    app: department-api
+  ports:
+  - name: department-api-port
+    port: 8088
+    targetPort: 8088
